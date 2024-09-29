@@ -378,14 +378,14 @@ func TestTableWidthHandling_SecondErrorCondition(t *testing.T) {
 
 func TestTableAlignPostsetting(t *testing.T) {
 	expected := "" +
-		"+-----------+-------+----------+\n"+
-		"| Name      | Value | Value 2  |\n"+
-		"+-----------+-------+----------+\n"+
-		"| hey       |   you |      man |\n"+
-		"| ken       |  1234 |     4321 |\n"+
-		"| derek     |  3.14 |      bob |\n"+
-		"| derek too |  3.15 | long bob |\n"+
-		"| escaping  | rox%% |       :) |\n"+
+		"+-----------+-------+----------+\n" +
+		"| Name      | Value | Value 2  |\n" +
+		"+-----------+-------+----------+\n" +
+		"| hey       |   you |      man |\n" +
+		"| ken       |  1234 |     4321 |\n" +
+		"| derek     |  3.14 |      bob |\n" +
+		"| derek too |  3.15 | long bob |\n" +
+		"| escaping  | rox%% |       :) |\n" +
 		"+-----------+-------+----------+\n"
 
 	table := CreateTable()
@@ -411,7 +411,7 @@ func TestTableMissingCells(t *testing.T) {
 		"| ken      | 1234    |\n" +
 		"| escaping | rox%s%% |\n" +
 		"+----------+---------+---------+\n"
-		// FIXME: missing extra cells there
+	// FIXME: missing extra cells there
 
 	table := CreateTable()
 
@@ -519,13 +519,13 @@ func TestTableMultipleAddHeader(t *testing.T) {
 
 func createTestTable() *Table {
 	table := CreateTable()
-	header := []interface{}{}
+	header := make([]interface{}, 0)
 	for i := 0; i < 50; i++ {
 		header = append(header, "First Column")
 	}
 	table.AddHeaders(header...)
 	for i := 0; i < 3000; i++ {
-		row := []interface{}{}
+		var row = make([]interface{}, 0)
 		for i := 0; i < 50; i++ {
 			row = append(row, "First row value")
 		}
