@@ -4,13 +4,12 @@ package termtables
 
 import (
 	"fmt"
+	"github.com/mattn/go-runewidth"
 	"math"
 	"regexp"
 	"strconv"
 	"strings"
 	"unicode/utf8"
-
-	runewidth "github.com/mattn/go-runewidth"
 )
 
 var (

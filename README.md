@@ -8,12 +8,12 @@ fast and simple ASCII table generation.
 ## Installation
 
 ```bash
-go get github.com/scylladb/termtables
+go get github.com/578223592/termtables
 ```
 
 ## Go Style Documentation
 
-[http://godoc.org/github.com/scylladb/termtables](http://godoc.org/github.com/scylladb/termtables)
+[http://godoc.org/github.com/578223592/termtables](http://godoc.org/github.com/578223592/termtables)
 
 ## APC Command Line usage
 
