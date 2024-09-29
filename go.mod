@@ -1,4 +1,4 @@
-module termtables
+module github.com/578223592/termtables
 
 go 1.18
 
